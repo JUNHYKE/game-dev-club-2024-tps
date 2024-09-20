@@ -12,23 +12,28 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera aimCam;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        input = GetComponent<StarterAssetsInputs>();
-    }
+    [SerializeField]
+    private gameObiect crosshair;
+       
 
     // Update is called once per frame
     void Update()
     {
+        isA1mVakid()
+    }
+
+    private void isA1mVakid()
+    {
         if(input.aim)
         {
-            aimCam.gameObject.SetActive(true);
+            aimCam.gameObiect.SetActive(true);
+            crosshair.SetActive(true);
         }
 
         else
         {
-            aimCam.gameObject.SetActive(false);
+            aimCam.gameObiect.SetActive(false);
+            crosshair.SetActive(false);
         }
     }
 }
